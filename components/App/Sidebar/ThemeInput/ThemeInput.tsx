@@ -37,23 +37,25 @@ function SidebarThemeInput(props: Props) {
 					}
 				/>
 
-				<button
-					className={`flex h-auto justify-center rounded-r-md border-y border-r p-2 shadow-inner ${
-						detailsValue == 'lighter'
-							? 'border-yellow-300 bg-yellow-400 text-yellow-900 shadow-yellow-300'
-							: 'border-slate-700 bg-slate-900 text-blue-50 shadow-slate-700'
-					}`}
-					onClick={() => {
-						if (detailsValue == 'lighter') {
-							detailsOnChange('darker');
-							return;
-						}
-						detailsOnChange('lighter');
-					}}
-					aria-label={`${detailsValue.slice(0, -2)} theme`}
-				>
-					{detailsValue == 'lighter' ? <SunIcon className='h-6 w-6' /> : <MoonIcon className='h-6 w-6' />}
-				</button>
+				<div className='tooltip' data-tip={detailsValue.slice(0, -2)}>
+					<button
+						className={`flex h-auto justify-center rounded-r-md border-y border-r p-2 shadow-inner ${
+							detailsValue == 'lighter'
+								? 'border-yellow-300 bg-yellow-400 text-yellow-900 shadow-yellow-300'
+								: 'border-slate-700 bg-slate-900 text-blue-50 shadow-slate-700'
+						}`}
+						onClick={() => {
+							if (detailsValue == 'lighter') {
+								detailsOnChange('darker');
+								return;
+							}
+							detailsOnChange('lighter');
+						}}
+						aria-label={`${detailsValue.slice(0, -2)} theme`}
+					>
+						{detailsValue == 'lighter' ? <SunIcon className='h-6 w-6' /> : <MoonIcon className='h-6 w-6' />}
+					</button>
+				</div>
 			</div>
 		</div>
 	);
