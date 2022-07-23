@@ -191,6 +191,7 @@ function AppSidebar() {
 					</Tab.Panel>
 				</Tab.Panels>
 			</Tab.Group>
+			<div className='divider'></div>
 		</div>
 	);
 }
