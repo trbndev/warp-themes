@@ -4,7 +4,7 @@ interface Props {
 
 function SidebarTitle(props: Props) {
 	const { children } = props;
-	return <h2 className=' text-lg font-medium text-gray-800 '>{children}</h2>;
+	return <h2 className='text-lg font-medium text-gray-800 '>{children}</h2>;
 }
 
 export default SidebarTitle;
