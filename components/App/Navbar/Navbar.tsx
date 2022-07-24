@@ -70,7 +70,7 @@ function AppNavbar() {
 						className='dropdown-content menu p-2 mt-4 drop-shadow-md bg-base-100 rounded-box w-52'
 					>
 						<li>
-							<label htmlFor='my-modal-6' className='modal-button'>
+							<label htmlFor='settings-modal' className='modal-button'>
 								<AdjustmentsIcon className='w-6 h-6' />
 								Settings
 							</label>
@@ -83,7 +83,6 @@ function AppNavbar() {
 						</li>
 						<li>
 							<a>
-								{' '}
 								<CashIcon className='w-6 h-6' />
 								Donate
 							</a>
