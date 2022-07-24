@@ -7,17 +7,12 @@ function AppDrawer(props) {
 	return (
 		<div className='drawer drawer-mobile'>
 			<input type='checkbox' id='settings-modal' className='modal-toggle' />
-			<div className='modal modal-bottom sm:modal-middle z-50'>
-				<div className='modal-box'>
-					<h3 className='font-bold text-lg'>Settings</h3>
-					<p className='py-4'>Coming Soon</p>
-					<div className='modal-action'>
-						<label htmlFor='settings-modal' className='btn'>
-							Close
-						</label>
-					</div>
-				</div>
-			</div>
+			<label htmlFor='settings-modal' className='modal cursor-pointer modal-bottom sm:modal-middle'>
+				<label className='modal-box relative' htmlFor=''>
+					<h3 className='text-lg font-bold'>Settings</h3>
+					<p className='py-4'>Coming soon</p>
+				</label>
+			</label>
 			<input id='app-drawer' type='checkbox' className='drawer-toggle' />
 			<div className='drawer-content flex flex-col bg-slate-100'>
 				<Navbar />
