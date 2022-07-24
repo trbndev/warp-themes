@@ -1,6 +1,7 @@
 import AppDrawerToggleButton from '@components/App/Drawer/ToggleButton';
 import AppTitle from '../Title';
-import { DownloadIcon } from '@heroicons/react/outline';
+import { DownloadIcon, AdjustmentsIcon, CashIcon, IdentificationIcon } from '@heroicons/react/outline';
+import { DotsVerticalIcon } from '@heroicons/react/solid';
 
 import YAML from 'json-to-pretty-yaml';
 import { useAppContext } from '@lib/AppContext';
@@ -55,11 +56,40 @@ function AppNavbar() {
 			<div className='flex-1'>
 				<AppTitle placement='NAVBAR' />
 			</div>
-			<div className='flex-none'>
+			<div className='flex-none gap-4'>
 				<button className='btn gap-2 bg-black' onClick={downloadTheme}>
 					<DownloadIcon className='w-6 h-6' />
 					Download
 				</button>
+				<div className='dropdown dropdown-end'>
+					<label tabIndex={0} className='btn btn-ghost btn-square m-1'>
+						<DotsVerticalIcon className='w-6 h-6' />
+					</label>
+					<ul
+						tabIndex={0}
+						className='dropdown-content menu p-2 mt-4 drop-shadow-md bg-base-100 rounded-box w-52'
+					>
+						<li>
+							<label htmlFor='my-modal-6' className='modal-button'>
+								<AdjustmentsIcon className='w-6 h-6' />
+								Settings
+							</label>
+						</li>
+						<li>
+							<a>
+								<IdentificationIcon className='w-6 h-6' />
+								About
+							</a>
+						</li>
+						<li>
+							<a>
+								{' '}
+								<CashIcon className='w-6 h-6' />
+								Donate
+							</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	);
