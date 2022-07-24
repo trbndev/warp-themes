@@ -64,10 +64,6 @@ function AppNavbar() {
 				<AppTitle placement='NAVBAR' />
 			</div>
 			<div className='flex-none gap-4'>
-				<button className='btn gap-2 bg-black' onClick={downloadTheme}>
-					<DownloadIcon className='w-6 h-6' />
-					Download
-				</button>
 				<div className='dropdown dropdown-end'>
 					<label tabIndex={0} className='btn btn-ghost btn-square m-1'>
 						<DotsVerticalIcon className='w-6 h-6' />
@@ -76,11 +72,26 @@ function AppNavbar() {
 						tabIndex={0}
 						className='dropdown-content menu p-2 mt-4 drop-shadow-md bg-base-100 rounded-box w-52'
 					>
+						<li className='menu-title'>
+							<span>General</span>
+						</li>
+						<li>
+							<label onClick={downloadTheme}>
+								<DownloadIcon className='w-6 h-6' />
+								Download{' '}
+								{
+									// TODO: SHOULD OPEN A MODAL */
+								}
+							</label>
+						</li>
 						<li>
 							<label htmlFor='settings-modal' className='modal-button'>
 								<AdjustmentsIcon className='w-6 h-6' />
 								Settings
 							</label>
+						</li>
+						<li className='menu-title'>
+							<span>More</span>
 						</li>
 						<li>
 							<a>
@@ -88,7 +99,6 @@ function AppNavbar() {
 								About
 							</a>
 						</li>
-						<hr />
 						<li>
 							<a href='https://www.buymeacoffee.com/haack' target='_blank' rel='noopener noreferrer'>
 								<CashIcon className='w-6 h-6 inline' />
