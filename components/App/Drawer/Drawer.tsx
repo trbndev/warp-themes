@@ -6,8 +6,22 @@ function AppDrawer(props) {
 
 	return (
 		<div className='drawer drawer-mobile'>
+			<input type='checkbox' id='my-modal-6' className='modal-toggle' />
+			<div className='modal modal-bottom sm:modal-middle z-50'>
+				<div className='modal-box'>
+					<h3 className='font-bold text-lg'>Congratulations random Internet user!</h3>
+					<p className='py-4'>
+						You've been selected for a chance to get one year of subscription to use Wikipedia for free!
+					</p>
+					<div className='modal-action'>
+						<label htmlFor='my-modal-6' className='btn'>
+							Yay!
+						</label>
+					</div>
+				</div>
+			</div>
 			<input id='app-drawer' type='checkbox' className='drawer-toggle' />
-			<div className='drawer-content flex flex-col bg-slate-100 '>
+			<div className='drawer-content flex flex-col bg-slate-100'>
 				<Navbar />
 				<main className='flex flex-col justify-center items-center flex-grow border'>{children}</main>
 			</div>
