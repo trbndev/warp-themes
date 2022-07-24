@@ -1,13 +1,20 @@
 import AppDrawerToggleButton from '@components/App/Drawer/ToggleButton';
 import AppTitle from '../Title';
-import { DownloadIcon, AdjustmentsIcon, CashIcon, IdentificationIcon } from '@heroicons/react/outline';
+import {
+	DownloadIcon,
+	AdjustmentsIcon,
+	CashIcon,
+	IdentificationIcon,
+	ExternalLinkIcon,
+	AtSymbolIcon,
+} from '@heroicons/react/outline';
 import { DotsVerticalIcon } from '@heroicons/react/solid';
 
 import YAML from 'json-to-pretty-yaml';
 import { useAppContext } from '@lib/AppContext';
 
 function AppNavbar() {
-	const [context, setContext] = useAppContext();
+	const [context, _] = useAppContext();
 
 	function downloadTheme() {
 		const theme = YAML.stringify({
@@ -81,10 +88,12 @@ function AppNavbar() {
 								About
 							</a>
 						</li>
+						<hr />
 						<li>
-							<a>
-								<CashIcon className='w-6 h-6' />
+							<a href='https://www.buymeacoffee.com/haack' target='_blank' rel='noopener noreferrer'>
+								<CashIcon className='w-6 h-6 inline' />
 								Donate
+								<ExternalLinkIcon className='w-4 h-4 ml-auto' />
 							</a>
 						</li>
 					</ul>
