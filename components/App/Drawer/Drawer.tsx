@@ -113,7 +113,7 @@ function AppDrawer(props) {
 					</table>
 				</label>
 			</label>*/}
-			<input type='checkbox' id='download-modal' className='modal-toggle' aria-hidden />
+			<input type='checkbox' id='download-modal' className='modal-toggle' aria-label='Toggle Download Modal' />
 			<label htmlFor='download-modal' className='modal cursor-pointer modal-bottom sm:modal-middle'>
 				<label className='modal-box flex flex-col justify-center overflow-x-hidden' htmlFor=''>
 					<div className='flex justify-center flex-col text-center'>
@@ -175,7 +175,7 @@ function AppDrawer(props) {
 					</div>
 				</label>
 			</label>
-			<input id='app-drawer' type='checkbox' className='drawer-toggle' aria-hidden />
+			<input id='app-drawer' type='checkbox' className='drawer-toggle' aria-label='Toggle App Sidebar' />
 			<div className='drawer-content flex flex-col bg-slate-100'>
 				<Navbar />
 				<main className='flex flex-col justify-center items-center flex-grow border'>{children}</main>
