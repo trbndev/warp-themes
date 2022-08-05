@@ -86,7 +86,7 @@ function AppNavbar() {
 							<label className='modal-buton flex items-center'>
 								<AdjustmentsIcon className='w-6 h-6' />
 								Settings
-								<div className='badge badge-sm badge-primary'>Coming</div>
+								<div className='badge badge-sm badge-primary'>Soon</div>
 							</label>
 						</li>
 						<li className='menu-title'>
