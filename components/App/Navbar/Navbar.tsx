@@ -76,18 +76,17 @@ function AppNavbar() {
 							<span>General</span>
 						</li>
 						<li>
-							<label onClick={downloadTheme}>
+							<label htmlFor='download-modal' className='modal-button'>
 								<DownloadIcon className='w-6 h-6' />
-								Download{' '}
-								{
-									// TODO: SHOULD OPEN A MODAL */
-								}
+								Download
 							</label>
 						</li>
-						<li>
-							<label htmlFor='settings-modal' className='modal-button'>
+						<li className='disabled'>
+							{/*htmlFor='settings-modal'*/}
+							<label className='modal-buton flex items-center'>
 								<AdjustmentsIcon className='w-6 h-6' />
 								Settings
+								<div className='badge badge-sm badge-primary'>Coming</div>
 							</label>
 						</li>
 						<li className='menu-title'>
