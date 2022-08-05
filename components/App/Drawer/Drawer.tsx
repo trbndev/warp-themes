@@ -128,7 +128,7 @@ function AppDrawer(props) {
 								</code>
 							</pre>
 						</div>
-						<p className='space-x-2 mt-2 flex justify-evenly'>
+						<div className='space-x-2 mt-2 flex justify-evenly'>
 							<label
 								className='btn btn-ghost swap'
 								role='button'
@@ -136,10 +136,14 @@ function AppDrawer(props) {
 									navigator.clipboard.writeText(
 										`curl https://war.vercel.app/d/${hashTheme()} | bash`
 									);
+									setTimeout(() => {
+										//@ts-ignore
+										document.getElementById('copied-curl-code').checked = false;
+									}, 1500);
 								}}
 							>
-								<input type='checkbox' />
-								<div className='swap-on'>📋 Copied</div>
+								<input type='checkbox' id='copied-curl-code' />
+								<div className='swap-on'>✅ Copied</div>
 								<div className='swap-off'>📋 Copy</div>
 							</label>
 
@@ -150,7 +154,7 @@ function AppDrawer(props) {
 							>
 								🔍 Inspect source
 							</a>
-						</p>
+						</div>
 					</div>
 					<div className='divider'>OR</div>
 					<div className='text-center'>
