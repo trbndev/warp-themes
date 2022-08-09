@@ -147,6 +147,7 @@ function AppDrawerModalsiTermColors() {
 			console.log(e);
 			alert("Couldn't load the color scheme.");
 		}
+		setFileURL('');
 	}
 
 	return (
