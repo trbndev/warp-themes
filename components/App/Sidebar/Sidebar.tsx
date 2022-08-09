@@ -9,11 +9,6 @@ import SidebarTitle from './Title';
 
 function AppSidebar() {
 	const [context, setContext] = useAppContext();
-	const [themeName, setThemeName] = useState(context.name);
-	const [accentColor, setAccentColor] = useState(context.accent.color);
-	const [backgroundColor, setBackgroundColor] = useState(context.background.color);
-	const [foregroundColor, setForegroundColor] = useState(context.foreground);
-	const [details, setDetails] = useState(context.details);
 	const [normalBlack, setNormalBlack] = useState(context.terminal_colors.normal.black);
 	const [normalRed, setNormalRed] = useState(context.terminal_colors.normal.red);
 	const [normalGreen, setNormalGreen] = useState(context.terminal_colors.normal.green);
@@ -30,51 +25,6 @@ function AppSidebar() {
 	const [brightMagenta, setBrightMagenta] = useState(context.terminal_colors.bright.magenta);
 	const [brightCyan, setBrightCyan] = useState(context.terminal_colors.bright.cyan);
 	const [brightWhite, setBrightWhite] = useState(context.terminal_colors.bright.white);
-
-	useEffect(() => {
-		setThemeName(context.name);
-	}, [context.name]);
-
-	useEffect(() => {
-		setContext({
-			...context,
-			name: themeName,
-		});
-	}, [themeName]);
-
-	useEffect(() => {
-		setContext({
-			...context,
-			accent: {
-				...context.accent,
-				color: accentColor,
-			},
-		});
-	}, [accentColor]);
-
-	useEffect(() => {
-		setContext({
-			...context,
-			background: {
-				...context.background,
-				color: backgroundColor,
-			},
-		});
-	}, [backgroundColor]);
-
-	useEffect(() => {
-		setContext({
-			...context,
-			foreground: foregroundColor,
-		});
-	}, [foregroundColor]);
-
-	useEffect(() => {
-		setContext({
-			...context,
-			details: details,
-		});
-	}, [details]);
 
 	useEffect(() => {
 		setContext({
@@ -134,16 +84,41 @@ function AppSidebar() {
 		<div className='px-4 pt-4 overflow-y-auto overflow-x-hidden w-fit bg-base-100 text-base-content z-40'>
 			<AppTitle placement='SIDEBAR' />
 			<ThemeInput
-				themeValue={themeName}
-				themeOnChange={setThemeName}
-				detailsValue={details}
-				detailsOnChange={setDetails}
+				themeValue={context.name}
+				themeOnChange={(n) => setContext({ ...context, name: n })}
+				detailsValue={context.details}
+				detailsOnChange={(d) => setContext({ ...context, details: d })}
 			/>
 			<SidebarTitle>General Colors</SidebarTitle>
 			<div className='mb-4 flex flex-row space-x-6'>
-				<ColorInput name='Accent' color={accentColor} setColor={setAccentColor} />
-				<ColorInput name='Background' color={backgroundColor} setColor={setBackgroundColor} />
-				<ColorInput name='Foreground' color={foregroundColor} setColor={setForegroundColor} />
+				<ColorInput
+					name='Accent'
+					color={context.accent.color}
+					setColor={(c) => setContext({ ...context, accent: { ...context.accent, color: c } })}
+				/>
+				<ColorInput
+					name='Background'
+					color={context.background.color}
+					setColor={(c) =>
+						setContext({
+							...context,
+							background: {
+								...context.background,
+								color: c,
+							},
+						})
+					}
+				/>
+				<ColorInput
+					name='Foreground'
+					color={context.foreground}
+					setColor={(c) =>
+						setContext({
+							...context,
+							foreground: c,
+						})
+					}
+				/>
 			</div>
 			<SidebarTitle>Terminal Colors</SidebarTitle>
 			<Tab.Group>
@@ -163,34 +138,226 @@ function AppSidebar() {
 				<Tab.Panels className='mb-6 rounded-md py-2 '>
 					<Tab.Panel>
 						<div className='flex flex-row space-x-6'>
-							<ColorInput name='Black' color={normalBlack} setColor={setNormalBlack} />
-							<ColorInput name='Red' color={normalRed} setColor={setNormalRed} />
-							<ColorInput name='Green' color={normalGreen} setColor={setNormalGreen} />
+							<ColorInput
+								name='Black'
+								color={context.terminal_colors.normal.black}
+								setColor={(c) =>
+									setContext({
+										...context,
+										terminal_colors: {
+											...context.terminal_colors,
+											normal: { ...context.terminal_colors.normal, black: c },
+										},
+									})
+								}
+							/>
+							<ColorInput
+								name='Red'
+								color={context.terminal_colors.normal.red}
+								setColor={(c) =>
+									setContext({
+										...context,
+										terminal_colors: {
+											...context.terminal_colors,
+											normal: { ...context.terminal_colors.normal, red: c },
+										},
+									})
+								}
+							/>
+							<ColorInput
+								name='Green'
+								color={context.terminal_colors.normal.green}
+								setColor={(c) =>
+									setContext({
+										...context,
+										terminal_colors: {
+											...context.terminal_colors,
+											normal: { ...context.terminal_colors.normal, green: c },
+										},
+									})
+								}
+							/>
 						</div>
 						<div className='flex flex-row space-x-6'>
-							<ColorInput name='Yellow' color={normalYellow} setColor={setNormalYellow} />
-							<ColorInput name='Blue' color={normalBlue} setColor={setNormalBlue} />
-							<ColorInput name='Magenta' color={normalMagenta} setColor={setNormalMagenta} />
+							<ColorInput
+								name='Yellow'
+								color={context.terminal_colors.normal.yellow}
+								setColor={(c) =>
+									setContext({
+										...context,
+										terminal_colors: {
+											...context.terminal_colors,
+											normal: { ...context.terminal_colors.normal, yellow: c },
+										},
+									})
+								}
+							/>
+							<ColorInput
+								name='Blue'
+								color={context.terminal_colors.normal.blue}
+								setColor={(c) =>
+									setContext({
+										...context,
+										terminal_colors: {
+											...context.terminal_colors,
+											normal: { ...context.terminal_colors.normal, blue: c },
+										},
+									})
+								}
+							/>
+							<ColorInput
+								name='Magenta'
+								color={context.terminal_colors.normal.magenta}
+								setColor={(c) =>
+									setContext({
+										...context,
+										terminal_colors: {
+											...context.terminal_colors,
+											normal: { ...context.terminal_colors.normal, magenta: c },
+										},
+									})
+								}
+							/>
 						</div>
 						<div className='flex flex-row space-x-6'>
-							<ColorInput name='Cyan' color={normalCyan} setColor={setNormalCyan} />
-							<ColorInput name='White' color={normalWhite} setColor={setNormalWhite} />
+							<ColorInput
+								name='Cyan'
+								color={context.terminal_colors.normal.cyan}
+								setColor={(c) =>
+									setContext({
+										...context,
+										terminal_colors: {
+											...context.terminal_colors,
+											normal: { ...context.terminal_colors.normal, cyan: c },
+										},
+									})
+								}
+							/>
+							<ColorInput
+								name='White'
+								color={context.terminal_colors.normal.white}
+								setColor={(c) =>
+									setContext({
+										...context,
+										terminal_colors: {
+											...context.terminal_colors,
+											normal: { ...context.terminal_colors.normal, white: c },
+										},
+									})
+								}
+							/>
 						</div>
 					</Tab.Panel>
 					<Tab.Panel>
 						<div className='flex flex-row space-x-6'>
-							<ColorInput name='Bright Black' color={brightBlack} setColor={setBrightBlack} />
-							<ColorInput name='Bright Red' color={brightRed} setColor={setBrightRed} />
-							<ColorInput name='Bright Green' color={brightGreen} setColor={setBrightGreen} />
+							<ColorInput
+								name='Bright Black'
+								color={context.terminal_colors.bright.black}
+								setColor={(c) =>
+									setContext({
+										...context,
+										terminal_colors: {
+											...context.terminal_colors,
+											bright: { ...context.terminal_colors.bright, black: c },
+										},
+									})
+								}
+							/>
+							<ColorInput
+								name='Bright Red'
+								color={context.terminal_colors.bright.red}
+								setColor={(c) =>
+									setContext({
+										...context,
+										terminal_colors: {
+											...context.terminal_colors,
+											bright: { ...context.terminal_colors.bright, red: c },
+										},
+									})
+								}
+							/>
+							<ColorInput
+								name='Bright Green'
+								color={context.terminal_colors.bright.green}
+								setColor={(c) =>
+									setContext({
+										...context,
+										terminal_colors: {
+											...context.terminal_colors,
+											bright: { ...context.terminal_colors.bright, green: c },
+										},
+									})
+								}
+							/>
 						</div>
 						<div className='flex flex-row space-x-6'>
-							<ColorInput name='Bright Yellow' color={brightYellow} setColor={setBrightYellow} />
-							<ColorInput name='Bright Blue' color={brightBlue} setColor={setBrightBlue} />
-							<ColorInput name='Bright Magenta' color={brightMagenta} setColor={setBrightMagenta} />
+							<ColorInput
+								name='Bright Yellow'
+								color={context.terminal_colors.bright.yellow}
+								setColor={(c) =>
+									setContext({
+										...context,
+										terminal_colors: {
+											...context.terminal_colors,
+											bright: { ...context.terminal_colors.bright, yellow: c },
+										},
+									})
+								}
+							/>
+							<ColorInput
+								name='Bright Blue'
+								color={context.terminal_colors.bright.blue}
+								setColor={(c) =>
+									setContext({
+										...context,
+										terminal_colors: {
+											...context.terminal_colors,
+											bright: { ...context.terminal_colors.bright, blue: c },
+										},
+									})
+								}
+							/>
+							<ColorInput
+								name='Bright Magenta'
+								color={context.terminal_colors.bright.magenta}
+								setColor={(c) =>
+									setContext({
+										...context,
+										terminal_colors: {
+											...context.terminal_colors,
+											bright: { ...context.terminal_colors.bright, magenta: c },
+										},
+									})
+								}
+							/>
 						</div>
 						<div className='flex flex-row space-x-6'>
-							<ColorInput name='Bright Cyan' color={brightCyan} setColor={setBrightCyan} />
-							<ColorInput name='Bright White' color={brightWhite} setColor={setBrightWhite} />
+							<ColorInput
+								name='Bright Cyan'
+								color={context.terminal_colors.bright.cyan}
+								setColor={(c) =>
+									setContext({
+										...context,
+										terminal_colors: {
+											...context.terminal_colors,
+											bright: { ...context.terminal_colors.bright, cyan: c },
+										},
+									})
+								}
+							/>
+							<ColorInput
+								name='Bright White'
+								color={context.terminal_colors.bright.white}
+								setColor={(c) =>
+									setContext({
+										...context,
+										terminal_colors: {
+											...context.terminal_colors,
+											bright: { ...context.terminal_colors.bright, white: c },
+										},
+									})
+								}
+							/>
 						</div>
 					</Tab.Panel>
 				</Tab.Panels>
