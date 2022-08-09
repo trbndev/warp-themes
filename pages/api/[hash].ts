@@ -10,25 +10,36 @@ readonly THEME_CONTENT='%THEME_INPUT%'
 # Warp Variables
 readonly WARP_THEME_DIR="$HOME/.warp/themes"
 # Colors
-GREEN_BOLD="\\033[1;32m"
-RESET="\\033[0m"
-YELLOW="\\033[1;33m"
-RED_BOLD="\\033[1;31m"
-BLUE_BOLD="\\033[1;34m"
-printf "\${BLUE_BOLD}Installing theme: \${RESET}%s\n" "\${THEME_NAME}"
+readonly RESET="\\033[0m"
+readonly BLACK="\\033[0;30m"
+readonly BOLD="\\033[1m"
+readonly DIM="\\033[2m"
+readonly GREEN_BOLD="\\033[1;32m"
+readonly RED_BOLD="\\033[1;31m"
+readonly BACKGROUND_LIGHT_GREEN="\\033[102m"
+readonly BACKGROUND_LIGHT_RED="\\033[101m"
+printf "\${BOLD}Warp-Theme Installer \${RESET}\${DIM}(v1.0.0)\${RESET}\\n\\n"
+printf "\${GREEN_BOLD}✔\${RESET} \${BOLD}Installing theme:\${RESET}\${DIM} \${THEME_NAME}\${RESET}\\n"
 # Check if WARP_THEME_DIR exists
 if [ ! -d "\${WARP_THEME_DIR}" ]; then
-	printf "\${YELLOW}Creating Warp Theme Directory:\${RESET} %s\n" "\${WARP_THEME_DIR}"
+	printf "\${GREEN_BOLD}✔\${RESET} \${BOLD}Creating Warp Theme Directory:\${RESET}\${DIM} \${WARP_THEME_DIR}\${RESET}\\n"
 	mkdir -p "\${WARP_THEME_DIR}"
 fi
 # Check if theme file already exists
 if [ -f "\${WARP_THEME_DIR}/\${THEME_NAME}.yaml" ]; then
-	printf "\${RED_BOLD}Theme already exists:\${RESET} %s\n\${RED_BOLD}Delete the file to continue\n\nCopy: \${RESET}rm \${WARP_THEME_DIR}/\${THEME_NAME}.yaml\n" "\${WARP_THEME_DIR}/\${THEME_NAME}.yaml"
+	printf "\${RED_BOLD}✗\${RESET} \${BOLD}Theme already exists:\${RESET} \${DIM}\${WARP_THEME_DIR}/\${THEME_NAME}.yaml\\n\\n"
+	printf "\${BLACK}\${BACKGROUND_LIGHT_RED} Next steps \${RESET}\\n\\n"
+	printf "Delete the file to continue\\n"
+	printf "Copy and paste \${DIM}rm \${WARP_THEME_DIR}/\${THEME_NAME}.yaml \${RESET}into your terminal\\n" 
 	exit 1
 fi
 touch "\${WARP_THEME_DIR}/\${THEME_NAME}.yaml"
 echo "\${THEME_CONTENT}" > "\${WARP_THEME_DIR}/\${THEME_NAME}.yaml"	
-printf "\${GREEN_BOLD}Successfully installed the theme \nRestart Warp to apply your newly installed theme ✨\n"`;
+printf "\${GREEN_BOLD}✔\${RESET} \${GREEN}Successfully installed the theme!\\n\\n"
+printf "\${BLACK}\${BACKGROUND_LIGHT_GREEN} Next steps \${RESET}\\n\\n"
+printf "Restart Warp and select \${GREEN_BOLD}\${THEME_NAME} \${RESET}from the Theme Picker\\n\\n"
+printf "Don't know how to open the Theme Picker? \${GREEN_BOLD}https://docs.warp.dev/features/themes#how-to-access-it\${RESET}\\n"
+printf "\${DIM}Enjoy your new theme!\${RESET}\\n"`;
 
 	response
 		.status(200)
