@@ -3,6 +3,8 @@ import { useState } from 'react';
 import { useAppContext } from '@lib/AppContext';
 import plist from 'plist';
 import rgbHex from 'rgb-hex';
+import { Transition } from '@headlessui/react';
+import toast from 'react-hot-toast';
 
 function AppDrawerModalsiTermColors() {
 	const [fileURL, setFileURL] = useState('');
@@ -142,9 +144,22 @@ function AppDrawerModalsiTermColors() {
 					},
 				},
 			});
-			alert('Color scheme loaded!');
+			toast.custom((t) => (
+				<Transition
+					show={t.visible}
+					enter='transition-opacity duration-75'
+					enterFrom='opacity-0'
+					enterTo='opacity-100'
+					leave='transition-opacity duration-150'
+					leaveFrom='opacity-100'
+					leaveTo='opacity-0'
+				>
+					<div className={`border border-green-500 bg-white px-6 py-4 shadow-md rounded-md`}>
+						<p>Color scheme loaded successfully!</p>
+					</div>
+				</Transition>
+			));
 		} catch (e) {
-			console.log(e);
 			alert("Couldn't load the color scheme.");
 		}
 		setFileURL('');
