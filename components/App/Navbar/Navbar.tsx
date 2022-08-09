@@ -1,6 +1,14 @@
 import AppDrawerToggleButton from '@components/App/Drawer/ToggleButton';
 import AppTitle from '../Title';
-import { DownloadIcon, AdjustmentsIcon, CashIcon, ExternalLinkIcon, CodeIcon } from '@heroicons/react/outline';
+import {
+	DownloadIcon,
+	AdjustmentsIcon,
+	CashIcon,
+	ExternalLinkIcon,
+	CodeIcon,
+	BeakerIcon,
+	SparklesIcon,
+} from '@heroicons/react/outline';
 import { DotsVerticalIcon } from '@heroicons/react/solid';
 
 function AppNavbar() {
@@ -13,6 +21,25 @@ function AppNavbar() {
 				<AppTitle placement='NAVBAR' />
 			</div>
 			<div className='flex-none gap-4'>
+				<div className='dropdown dropdown-end'>
+					<label tabIndex={0} className='btn btn-ghost btn-square m-1'>
+						<BeakerIcon className='w-6 h-6' />
+					</label>
+					<ul
+						tabIndex={0}
+						className='dropdown-content menu p-2 mt-4 drop-shadow-md bg-base-100 rounded-box w-52'
+					>
+						<li className='menu-title'>
+							<span>Experimental Features</span>
+						</li>
+						<li>
+							<label htmlFor='iterm-modal' className='modal-button text-sm'>
+								<SparklesIcon className='w-6 h-6' />
+								Load iTerm Colors
+							</label>
+						</li>
+					</ul>
+				</div>
 				<div className='dropdown dropdown-end'>
 					<label tabIndex={0} className='btn btn-ghost btn-square m-1'>
 						<DotsVerticalIcon className='w-6 h-6' />

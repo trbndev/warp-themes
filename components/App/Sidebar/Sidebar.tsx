@@ -32,6 +32,10 @@ function AppSidebar() {
 	const [brightWhite, setBrightWhite] = useState(context.terminal_colors.bright.white);
 
 	useEffect(() => {
+		setThemeName(context.name);
+	}, [context.name]);
+
+	useEffect(() => {
 		setContext({
 			...context,
 			name: themeName,
