@@ -1,3 +1,4 @@
+import AppDrawerModalsAbout from './About';
 import AppDrawerModalsDownload from './Download';
 import AppDrawerModalsiTermColors from './iTermColors';
 
@@ -6,6 +7,7 @@ function AppDrawerModals() {
 		<>
 			<AppDrawerModalsDownload />
 			<AppDrawerModalsiTermColors />
+			<AppDrawerModalsAbout />
 		</>
 	);
 }
