@@ -1,6 +1,8 @@
 name: 📝 Typo or Grammar Fix
 description: That doesn't sound right!
 labels: [typo]
+assignees:
+  - trbnhck
 body:
   - type: markdown
     attributes:
