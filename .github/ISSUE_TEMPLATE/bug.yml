@@ -20,14 +20,14 @@ body:
   - type: textarea
     id: bug-description
     attributes:
-      label: Bug description
+      label: Bug Description
       description: What happened? What should have happened?
     validations:
       required: true
   - type: textarea
     id: steps
     attributes:
-      label: Steps to reproduce
+      label: Steps to Reproduce
       description: What needs to be done, to reproduce this bug?
     validations:
       required: true
