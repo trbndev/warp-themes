@@ -3,7 +3,6 @@ import { HexColorPicker } from 'react-colorful';
 function ColorInput(props) {
 	const { name, color, setColor } = props;
 
-	//TODO: aria-valuenow is missing on HexColorPicker, need a way to fix it
 	return (
 		<div className='my-4 flex flex-row items-center justify-evenly bg-white text-center'>
 			<div className='flex flex-col'>
