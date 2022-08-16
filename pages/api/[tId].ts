@@ -1,9 +1,21 @@
 import { NextApiRequest, NextApiResponse } from 'next';
+import { initializeApp } from 'firebase/app';
+import { getFirestore, getDoc, doc } from 'firebase/firestore';
+import YAML from 'json-to-pretty-yaml';
 
-export default function handler(request: NextApiRequest, response: NextApiResponse) {
-	const { hash } = request.query;
-	const yaml = Buffer.from(hash as string, 'base64').toString('ascii');
-	const script = `#!/bin/bash
+const firebaseConfig = {
+	apiKey: process.env.FIREBASE_API_KEY,
+	authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+	projectId: process.env.FIREBASE_PROJECT_ID,
+	storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+	messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+	appId: process.env.FIREBASE_APP_ID,
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+const script = `#!/bin/bash
 # Theme Configuration
 readonly THEME_NAME="%THEME_NAME%"
 readonly THEME_CONTENT='%THEME_INPUT%'
@@ -41,11 +53,40 @@ printf "Restart Warp and select \${GREEN_BOLD}\${THEME_NAME} \${RESET}from the T
 printf "Don't know how to open the Theme Picker? \${GREEN_BOLD}https://docs.warp.dev/features/themes#how-to-access-it\${RESET}\\n"
 printf "\${DIM}Enjoy your new theme!\${RESET}\\n"`;
 
-	response
-		.status(200)
-		.send(
-			script
-				.replace('%THEME_NAME%', yaml.split(';')[0])
-				.replace('%THEME_INPUT%', yaml.replace(yaml.split(';')[0] + ';', ''))
-		);
+const script_not_found = `#!/bin/bash
+readonly RESET="\\033[0m"
+readonly BOLD="\\033[1m"
+readonly RED_BOLD="\\033[1;31m"
+readonly BACKGROUND_LIGHT_RED="\\033[41;30m"
+printf "\${BOLD}Warp-Themes Installer \${RESET}\${DIM}(v1.0.0)\${RESET}\\n\\n"
+printf "\${RED_BOLD}✗\${RESET} \${BOLD}Theme not found!\\n\\n"
+printf "\${BLACK}\${BACKGROUND_LIGHT_RED}\${BLACK} Next steps \${RESET}\\n\\n"
+printf "Check if the ID is correct\nIf it is, click the Download button again\\n"
+exit 1
+`;
+
+async function handler(request: NextApiRequest, response: NextApiResponse) {
+	const tId = request.query.tId as string;
+	const raw = request.query.raw;
+
+	const docRef = doc(db, 'themes', tId);
+	const docSnap = await getDoc(docRef);
+
+	if (docSnap.exists()) {
+		if (raw === 'true') {
+			response.status(200).send(YAML.stringify(docSnap.data().content));
+		} else {
+			response
+				.status(200)
+				.send(
+					script
+						.replace('%THEME_NAME%', docSnap.data().name)
+						.replace('%THEME_INPUT%', YAML.stringify(docSnap.data().content))
+				);
+		}
+	} else {
+		response.status(404).send(script_not_found);
+	}
 }
+
+export default handler;
