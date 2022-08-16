@@ -56,11 +56,11 @@ function WarpAppCommand_Neofetch() {
 				<div>
 					<p>
 						<b style={{ color: context.terminal_colors.normal.green }}>root</b>@
-						<b style={{ color: context.terminal_colors.normal.green }}>warp-theme</b>
+						<b style={{ color: context.terminal_colors.normal.green }}>warp-themes</b>
 					</p>
 					<p>--------------------</p>
 					<p>
-						<b style={{ color: context.terminal_colors.normal.yellow }}>Host</b>: vercel.app
+						<b style={{ color: context.terminal_colors.normal.yellow }}>Host</b>: warp-themes.com
 					</p>
 					<p>
 						<b style={{ color: context.terminal_colors.normal.yellow }}>Uptime</b>: 12 hours, 8

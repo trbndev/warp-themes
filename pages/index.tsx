@@ -14,37 +14,37 @@ function IndexPage() {
 				</svg>"
 				/>
 
-				<title>Warp-Theme - Theme Builder for Warp</title>
-				<meta name='title' content='Warp-Theme - Theme Builder for Warp' />
+				<title>Warp-Themes - Theme Builder for Warp</title>
+				<meta name='title' content='Warp-Themes - Theme Builder for Warp' />
 				<meta
 					name='description'
-					content='With Warp-Theme you can easily create themes for the Warp Terminal ✨'
+					content='With Warp-Themes you can easily create themes for the Warp Terminal ✨'
 				/>
 
 				<meta property='og:type' content='website' />
-				<meta property='og:url' content='https://warp-theme.vercel.app/' />
-				<meta property='og:title' content='Warp-Theme - Theme Builder for Warp' />
+				<meta property='og:url' content='https://warp-themes.com/' />
+				<meta property='og:title' content='Warp-Themes - Theme Builder for Warp' />
 				<meta
 					property='og:description'
-					content='With Warp-Theme you can easily create themes for the Warp Terminal ✨'
+					content='With Warp-Themes you can easily create themes for the Warp Terminal ✨'
 				/>
 				<meta
 					property='og:image'
-					content='https://raw.githubusercontent.com/trbnhck/warp-theme/main/.github/assets/screenshot.png'
+					content='https://raw.githubusercontent.com/trbnhck/warp-themes/main/.github/assets/screenshot.png'
 				/>
 
 				<meta property='twitter:card' content='summary_large_image' />
-				<meta property='twitter:url' content='https://warp-theme.vercel.app/' />
-				<meta property='twitter:title' content='Warp-Theme - Theme Builder for Warp' />
+				<meta property='twitter:url' content='https://warp-themes.com/' />
+				<meta property='twitter:title' content='Warp-Themes - Theme Builder for Warp' />
 				<meta
 					property='twitter:description'
-					content='With Warp-Theme you can easily create themes for the Warp Terminal ✨'
+					content='With Warp-Themes you can easily create themes for the Warp Terminal ✨'
 				/>
 				<meta
 					property='twitter:image'
-					content='https://raw.githubusercontent.com/trbnhck/warp-theme/main/.github/assets/screenshot.png'
+					content='https://raw.githubusercontent.com/trbnhck/warp-themes/main/.github/assets/screenshot.png'
 				/>
-				<meta name='keywords' content='Warp, Theme, Creator, Terminal, Color' />
+				<meta name='keywords' content='Warp, Theme, Creator, Terminal, Color, Warp-Themes' />
 				<meta name='robots' content='index, follow' />
 			</Head>
 			<WarpApp />

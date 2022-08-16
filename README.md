@@ -2,31 +2,31 @@
 <br />
 
 <div align="center">
-  <a href="https://warp-theme.vercel.app">
+  <a href="https://warp-themes.com">
     <img src=".github/assets/logo.png" alt="Warp-Theme" width="500">
   </a>
   <br />
   A theme builder for <a href="https://warp.dev">Warp</a>
   <p>
     <br />
-    <a href="https://warp-theme.vercel.app"><strong>Try it out now ✨</strong></a>
+    <a href="https://warp-themes.com"><strong>Try it out now ✨</strong></a>
     <br/>
-    <a href="https://github.com/trbnhck/warp-theme/issues">Report Bug</a>
+    <a href="https://github.com/trbnhck/warp-themes/issues">Report Bug</a>
     ·
-    <a href="https://github.com/trbnhck/warp-theme/issues">Request Feature</a>
+    <a href="https://github.com/trbnhck/warp-themes/issues">Request Feature</a>
   </p>
 </div>
 
 ## Preview
 
-<a href="https://warp-theme.vercel.app">
-  <img src=".github/assets/screenshot.png" alt="Warp-Theme">
+<a href="https://warp-themes.com">
+  <img src=".github/assets/screenshot.png" alt="Warp-Themes">
 </a>
 
 ## Roadmap
 
-- [ ] Add Support for Background Images
-- [ ] Add Support for Gradients
+-   [ ] Add Support for Background Images
+-   [ ] Add Support for Gradients
 
 ## Donate
 
@@ -47,6 +47,7 @@ Don't forget to give the project a star! Thanks again!
 5. Open a Pull Request
 
 ## Contact
+
 [@torben_haack](https://twitter.com/torben_haack) – haack.t@icloud.com
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

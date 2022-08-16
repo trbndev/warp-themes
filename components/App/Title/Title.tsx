@@ -8,7 +8,7 @@ function AppTitle(props: Props) {
 	const conditionalVisibility = props.placement == 'NAVBAR' ? 'lg:hidden' : 'hidden lg:block mb-6';
 	return (
 		<a href='#' className={['normal-case text-2xl font-bold', conditionalVisibility].join(' ')}>
-			<TerminalIcon className='w-8 h-8 inline' /> Warp Theme
+			<TerminalIcon className='w-8 h-8 inline' /> Warp-Themes
 			<span className='ml-2 text-xs font-normal italic'>by Torben Haack</span>
 		</a>
 	);

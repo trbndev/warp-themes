@@ -21,8 +21,8 @@ function AppDrawer(props) {
 			>
 				<div className='bg-white px-6 py-4 shadow-md rounded-md border'>
 					<p>
-						Welcome to <span className='font-medium'>Warp-Theme</span>! 👋 <br />
-						<i>Warp-Theme</i> is a theme builder for{' '}
+						Welcome to <span className='font-medium'>Warp-Themes</span>! 👋 <br />
+						<span className='font-medium'>Warp-Themes</span> is a theme builder for{' '}
 						<a href='https://warp.dev' target='_blank' className='text-blue-600 hover:text-blue-700'>
 							Warp
 						</a>
