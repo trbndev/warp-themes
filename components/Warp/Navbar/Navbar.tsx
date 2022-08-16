@@ -12,8 +12,8 @@ function WarpAppNavbar() {
 					<WarpAppNavbarSystemButtons type='max' />
 				</div>
 				<div className='flex flex-row'>
-					<WarpAppNavbarTab title='~/warp-theme' active />
-					<WarpAppNavbarTab title='~/warp-theme/rainbow' />
+					<WarpAppNavbarTab title='~/warp-themes' active />
+					<WarpAppNavbarTab title='~/warp-themes/rainbow' />
 				</div>
 			</div>
 			<WarpAppBlockDivider />

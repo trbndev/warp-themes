@@ -72,7 +72,7 @@ function AppNavbar() {
 						</li>
 						<li>
 							<a
-								href='https://www.github.com/trbnhck/warp-theme'
+								href='https://www.github.com/trbnhck/warp-themes'
 								target='_blank'
 								rel='noopener noreferrer'
 							>

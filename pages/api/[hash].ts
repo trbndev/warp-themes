@@ -18,7 +18,7 @@ readonly GREEN_BOLD="\\033[1;32m"
 readonly RED_BOLD="\\033[1;31m"
 readonly BACKGROUND_LIGHT_GREEN="\\033[102m"
 readonly BACKGROUND_LIGHT_RED="\\033[101m"
-printf "\${BOLD}Warp-Theme Installer \${RESET}\${DIM}(v1.0.0)\${RESET}\\n\\n"
+printf "\${BOLD}Warp-Themes Installer \${RESET}\${DIM}(v1.0.0)\${RESET}\\n\\n"
 printf "\${GREEN_BOLD}✔\${RESET} \${BOLD}Installing theme:\${RESET}\${DIM} \${THEME_NAME}\${RESET}\\n"
 # Check if WARP_THEME_DIR exists
 if [ ! -d "\${WARP_THEME_DIR}" ]; then

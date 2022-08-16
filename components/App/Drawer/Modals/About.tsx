@@ -8,7 +8,7 @@ function AppDrawerModalsAbout() {
 				<label className='modal-box flex flex-col justify-center overflow-x-hidden' htmlFor=''>
 					<h3 className='text-2xl font-bold mb-4'>About</h3>
 					<p className='mb-2'>
-						<span className='text-primary font-medium'>Warp-Theme</span> is a visual theme builder for the{' '}
+						<span className='text-primary font-medium'>Warp-Themes</span> is a visual theme builder for the{' '}
 						<a href='https://warp.dev/' target='_blank'>
 							Warp
 						</a>{' '}

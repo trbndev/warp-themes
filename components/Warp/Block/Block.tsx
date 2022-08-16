@@ -16,7 +16,7 @@ function WarpAppBlock(props: Props) {
 	return (
 		<div className='relative pt-3 pb-4 font-mono'>
 			<div className='pl-4'>
-				<p className='text-xs font-thin opacity-60'>~/warp-theme.vercel.app ({execution_time})</p>
+				<p className='text-xs font-thin opacity-60'>~/warp-themes.com ({execution_time})</p>
 				<p className='pb-1 text-base font-bold'>{command}</p>
 				{children}
 			</div>
