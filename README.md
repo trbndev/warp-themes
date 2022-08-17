@@ -23,11 +23,6 @@
   <img src=".github/assets/screenshot.png" alt="Warp-Themes">
 </a>
 
-## Roadmap
-
--   [ ] Add Support for Background Images
--   [ ] Add Support for Gradients
-
 ## Donate
 
 If you want to support me, consider buying me a [☕️ Coffee](https://www.buymeacoffee.com/haack).
