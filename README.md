@@ -5,44 +5,63 @@
   <a href="https://warp-themes.com">
     <img src=".github/assets/hero.png" alt="Warp-Themes">
   </a>
+  <br /><br />
+  
+  <h3>A visual theme builder for <a href="https://warp.dev">Warp</a></h3>
+  
   <br />
-  A theme builder for <a href="https://warp.dev">Warp</a>
-  <p>
-    <br />
-    <a href="https://warp-themes.com"><strong>Try it out now ✨</strong></a>
-    <br/>
-    <a href="https://github.com/trbnhck/warp-themes/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/trbnhck/warp-themes/issues">Request Feature</a>
-  </p>
+    
+  <h3><a href="https://warp-themes.com"><strong>✨ Try it out now ✨</strong></a></h3>
+    
+  <br/>
+  <a href="https://github.com/trbnhck/warp-themes/issues"> 🐛 Report a Bug</a>&nbsp;&nbsp;·&nbsp; 
+  <a href="https://github.com/trbnhck/warp-themes/issues">🚀 Request Feature</a>
+  <br />
+  <h4><a href="https://ko-fi.com/haack">☕️ Support the Development</a></h4>
 </div>
 
-## Preview
+## Table of Contents
+
+## About
+
+Warp-Themes is a visual theme builder for <a href="https://warp.dev">Warp</a>. It's a web-app built with NextJS and hosted on Vercel ▲
+
+## Features
+
+### Easily customize the colors of your theme
+
+Warp-Themes offers you a sidebar, with which you can easily adjust all the colors (and some few more options) of your theme 🎨
 
 <a href="https://warp-themes.com">
-  <img src=".github/assets/screenshot.png" alt="Warp-Themes">
+  <img src=".github/assets/demo_changing_colors.gif" alt="Warp-Themes Demo Changing colors">
 </a>
 
-## Donate
+### Migrate iTerm Color Schemes to Warp
 
-If you want to support me, consider buying me a [☕️ Coffee](https://www.buymeacoffee.com/haack).
-Every donation is highly appreciated.
+Does your favorite theme have an iTerm Color Scheme but not a Warp theme? Worry no more. Worry no more. With only a few clicks you can migrate it to Warp 🔮
 
-## Contributing
+<a href="https://warp-themes.com">
+  <img src=".github/assets/demo_iterm_colors.gif" alt="Warp-Themes Demo Migrating from iTerm">
+</a>
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+### Easy installation via the terminal
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
+You can install your newly created theme easily via the terminal. If you're skeptical about running it, just check out the source of the script 🔎 No hidden magic ✨
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+<a href="https://warp-themes.com">
+  <img src=".github/assets/demo_installation.gif" alt="Warp-Themes Demo Install via Terminal">
+</a>
+
+## Support the Development
+
+If you like the project and want to support the future development of it, maybe consider sponsoring me, by clicking the <a href="#readme-top">Sponsor button</a> at the top of the page or tip me a small amount over at <a href="https://ko-fi.com/haack">Ko-fi ☕️</a>.
+
+## Special Thanks
+
+Special thanks to the awesome team over at [Warp](https://warp.dev/). They not only sponsored the domain ([warp-themes.com](https://warp-themes.com/)) but also gave me feedback and suggestions for improvement, after reaching out to me, after the first time tweeting about the project ✨
 
 ## Contact
 
-[@torben_haack](https://twitter.com/torben_haack) – haack.t@icloud.com
+[@torben_haack](https://twitter.com/torben_haack) – hi@warp-themes.com
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
