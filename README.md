@@ -13,7 +13,7 @@
     
   <br/>
   <a href="https://github.com/trbnhck/warp-themes/issues"> 🐛 Report a Bug</a>&nbsp;&nbsp;·&nbsp; 
-  <a href="https://github.com/trbnhck/warp-themes/issues">🚀 Request Feature</a>
+  <a href="https://github.com/trbnhck/warp-themes/issues">🚀 Request a Feature</a>
   <br />
   <h4><a href="https://ko-fi.com/haack">☕️ Support the Development</a></h4>
 </div>
