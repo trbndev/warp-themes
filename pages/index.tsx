@@ -32,7 +32,7 @@ function IndexPage() {
 				/>
 				<meta
 					property='og:image'
-					content='https://raw.githubusercontent.com/trbnhck/warp-themes/main/.github/assets/screenshot.png'
+					content='https://raw.githubusercontent.com/trbnhck/warp-themes/main/.github/assets/hero.png'
 				/>
 
 				<meta property='twitter:card' content='summary_large_image' />
@@ -44,7 +44,7 @@ function IndexPage() {
 				/>
 				<meta
 					property='twitter:image'
-					content='https://raw.githubusercontent.com/trbnhck/warp-themes/main/.github/assets/screenshot.png'
+					content='https://raw.githubusercontent.com/trbnhck/warp-themes/main/.github/assets/hero.png'
 				/>
 				<meta name='keywords' content='Warp, Theme, Creator, Terminal, Color, Warp-Themes' />
 				<meta name='robots' content='index, follow' />

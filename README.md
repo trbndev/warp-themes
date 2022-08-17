@@ -3,7 +3,7 @@
 
 <div align="center">
   <a href="https://warp-themes.com">
-    <img src=".github/assets/logo.svg" alt="Warp-Themes" width="500">
+    <img src=".github/assets/hero.png" alt="Warp-Themes">
   </a>
   <br />
   A theme builder for <a href="https://warp.dev">Warp</a>
