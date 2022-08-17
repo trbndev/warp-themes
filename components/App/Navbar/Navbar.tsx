@@ -74,7 +74,7 @@ function AppNavbar() {
 								<span>General</span>
 							</li>
 							<li className='disabled'>
-								{/*htmlFor='settings-modal'*/}
+							
 								<label className='modal-buton flex items-center'>
 									<AdjustmentsIcon className='w-6 h-6' />
 									Settings
@@ -118,7 +118,7 @@ function AppNavbar() {
 								</a>
 							</li>
 							<li>
-								<a href='https://www.buymeacoffee.com/haack' target='_blank' rel='noopener noreferrer'>
+								<a href='https://www.ko-fi.com/haack' target='_blank' rel='noopener noreferrer'>
 									<CashIcon className='w-6 h-6 inline' />
 									Donate
 									<ExternalLinkIcon className='w-4 h-4 ml-auto' />
