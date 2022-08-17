@@ -8,8 +8,6 @@
   <br /><br />
   
   <h3>A visual theme builder for <a href="https://warp.dev">Warp</a></h3>
-  
-  <br />
     
   <h3><a href="https://warp-themes.com"><strong>✨ Try it out now ✨</strong></a></h3>
     
