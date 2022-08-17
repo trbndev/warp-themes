@@ -19,7 +19,7 @@ function AppDialogAbout(props: Props) {
 						<p className='mb-2'>
 							<span className='text-primary font-medium'>Warp-Themes</span> is a visual theme builder for
 							the{' '}
-							<a href='https://warp.dev/' target='_blank'>
+							<a href='https://warp.dev/' target='_blank' className='text-blue-500 focus:outline-none'>
 								Warp
 							</a>{' '}
 							Terminal.

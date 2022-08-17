@@ -34,7 +34,7 @@ function AppNavbar() {
 	const [isITermColorsOpen, setIsITermColorsOpen] = useState(false);
 
 	return (
-		<nav className='flex w-full py-3 pl-4 pr-2 items-center flex-row justify-between'>
+		<nav className='flex w-full py-3 pl-4 pr-2 fixed items-center bg-white border-b flex-row justify-between'>
 			<svg xmlns='http://www.w3.org/2000/svg' className='w-52' fill='none' viewBox='0 0 1123 208'>
 				<path
 					fill='#111827'

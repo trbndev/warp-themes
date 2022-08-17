@@ -80,7 +80,7 @@ function AppSidebar() {
 	];
 
 	return (
-		<div className='px-4 pt-2 overflow-y-auto overflow-x-hidden w-fit bg-base-100 text-base-content z-40'>
+		<div className='px-4 pt-20 h-full overflow-scroll w-fit bg-base-100 text-base-content z-40'>
 			<ThemeInput
 				themeValue={context.name}
 				themeOnChange={(n) => setContext({ ...context, name: n })}

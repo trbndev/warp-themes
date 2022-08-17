@@ -17,8 +17,6 @@ const db = getFirestore(app);
 async function handler(request: NextApiRequest, response: NextApiResponse) {
 	if (request.method != 'POST') return;
 
-	console.log(request.body);
-
 	let responseObj: { status: number; tId: string | number } = {
 		status: -1,
 		tId: '',
@@ -34,7 +32,6 @@ async function handler(request: NextApiRequest, response: NextApiResponse) {
 	} catch (e) {
 		responseObj.status = 500;
 		responseObj.tId = -1;
-		console.error(e);
 	}
 
 	response.status(responseObj.status).json(responseObj);
