@@ -176,7 +176,7 @@ function AppDialogDownload() {
 							</div>
 							<div className='w-full flex flex-row justify-evenly'>
 								<label
-									className='btn btn-ghost btn-wide swap'
+									className='btn bg-black btn-wide swap text-lg'
 									role='button'
 									onClick={() => {
 										navigator.clipboard.writeText(
@@ -192,7 +192,7 @@ function AppDialogDownload() {
 									<div className='swap-on'>✅ Copied</div>
 									<div className='swap-off'>📋 Copy</div>
 								</label>
-								<a className='btn btn-ghost btn-wide'>🔍 Inspect Source</a>
+								<a className='btn btn-outline btn-wide text-lg'>🔍 Inspect Source</a>
 							</div>
 						</div>
 						<div className='divider'>OR</div>
