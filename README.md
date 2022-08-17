@@ -18,8 +18,6 @@
   <h4><a href="https://ko-fi.com/haack">☕️ Support the Development</a></h4>
 </div>
 
-## Table of Contents
-
 ## About
 
 Warp-Themes is a visual theme builder for <a href="https://warp.dev">Warp</a>. It's a web-app built with NextJS and hosted on Vercel ▲
