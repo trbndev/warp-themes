@@ -1,7 +1,6 @@
 import { useState, useEffect, Fragment } from 'react';
 import { useAppContext } from '@lib/AppContext';
 
-import AppTitle from '../Title';
 import ColorInput from './ColorInput';
 import { Tab } from '@headlessui/react';
 import ThemeInput from './ThemeInput';
@@ -81,8 +80,7 @@ function AppSidebar() {
 	];
 
 	return (
-		<div className='px-4 pt-4 overflow-y-auto overflow-x-hidden w-fit bg-base-100 text-base-content z-40'>
-			<AppTitle placement='SIDEBAR' />
+		<div className='px-4 pt-20 h-full overflow-scroll w-fit bg-base-100 text-base-content z-40'>
 			<ThemeInput
 				themeValue={context.name}
 				themeOnChange={(n) => setContext({ ...context, name: n })}
@@ -135,7 +133,7 @@ function AppSidebar() {
 					</Tab>
 					<hr />
 				</Tab.List>
-				<Tab.Panels className='mb-6 rounded-md py-2 '>
+				<Tab.Panels className='rounded-md py '>
 					<Tab.Panel>
 						<div className='flex flex-row space-x-6'>
 							<ColorInput

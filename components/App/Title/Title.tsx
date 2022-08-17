@@ -5,9 +5,9 @@ interface Props {
 }
 
 function AppTitle(props: Props) {
-	const conditionalVisibility = props.placement == 'NAVBAR' ? 'lg:hidden' : 'hidden lg:block mb-6';
+	//const conditionalVisibility = props.placement == 'NAVBAR' ? 'lg:hidden' : 'hidden lg:block mb-6';
 	return (
-		<a href='#' className={['normal-case text-2xl font-bold', conditionalVisibility].join(' ')}>
+		<a href='#' className='normal-case text-2xl font-bold'>
 			<svg xmlns='http://www.w3.org/2000/svg' className='w-52' fill='none' viewBox='0 0 1123 208'>
 				<path
 					fill='#000'

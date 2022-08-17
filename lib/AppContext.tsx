@@ -42,6 +42,9 @@ const defaultContext = {
 			white: '#feffff',
 		},
 	},
+	openSettingsDialog: false,
+	openAboutDialog: false,
+	openiTermDialog: false,
 };
 
 const AppContext = createContext<any>(defaultContext);

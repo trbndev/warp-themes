@@ -3,10 +3,15 @@ import { useState } from 'react';
 import { useAppContext } from '@lib/AppContext';
 import plist from 'plist';
 import rgbHex from 'rgb-hex';
-import { Transition } from '@headlessui/react';
+import { Dialog, Transition } from '@headlessui/react';
 import toast from 'react-hot-toast';
 
-function AppDrawerModalsiTermColors() {
+interface Props {
+	_open: boolean;
+	_onClose: (val: boolean) => void;
+}
+
+function AppDialogITermColors(props: Props) {
 	const [fileURL, setFileURL] = useState('');
 	const [context, setContext] = useAppContext();
 
@@ -144,6 +149,7 @@ function AppDrawerModalsiTermColors() {
 					},
 				},
 			});
+			props._onClose(false);
 			toast.custom((t) => (
 				<Transition
 					show={t.visible}
@@ -167,35 +173,44 @@ function AppDrawerModalsiTermColors() {
 
 	return (
 		<>
-			<input type='checkbox' id='iterm-modal' className='modal-toggle' aria-label='Toggle iTerm Modal' />
-			<label htmlFor='iterm-modal' className='modal cursor-pointer modal-bottom sm:modal-middle'>
-				<label className='modal-box flex flex-col justify-center overflow-x-hidden' htmlFor=''>
-					<h2 className='text-lg font-semibold mb-1'>iTerm Color Scheme</h2>
-					<p className='mb-2'>Load iTerm Color Scheme from URL.</p>
-					<div className='form-control'>
-						<div className='input-group'>
-							<input
-								type='URL'
-								placeholder='File Link'
-								value={fileURL}
-								onChange={(e) => setFileURL(e.target.value)}
-								className='input input-bordered w-full'
-							/>
-							<label htmlFor='iterm-modal' className='btn btn-square' onClick={loadTheme}>
-								<InboxInIcon className='w-6 h-6' />
-							</label>
+			<Dialog open={props._open} onClose={props._onClose} className='absolute z-30'>
+				<div className='fixed inset-0 bg-black/20 backdrop-blur-sm' aria-hidden='true'></div>
+
+				<div className='fixed inset-0 flex items-center justify-center p-4'>
+					<Dialog.Panel className='mx-auto  w-fit rounded-lg shadow-lg bg-white px-12 py-7'>
+						<Dialog.Title className='text-3xl font-semibold mb-4'>iTerm Color Scheme</Dialog.Title>
+						<input
+							type='checkbox'
+							id='iterm-modal'
+							className='modal-toggle'
+							aria-label='Toggle iTerm Modal'
+						/>
+						<p className='mb-2'>Load iTerm Color Scheme from URL.</p>
+						<div className='form-control'>
+							<div className='input-group'>
+								<input
+									type='URL'
+									placeholder='File Link'
+									value={fileURL}
+									onChange={(e) => setFileURL(e.target.value)}
+									className='input input-bordered w-full'
+								/>
+								<label htmlFor='iterm-modal' className='btn btn-square' onClick={loadTheme}>
+									<InboxInIcon className='w-6 h-6' />
+								</label>
+							</div>
 						</div>
-					</div>
-					<div className='divider'></div>
-					<p>
-						<span className='text-slate-500'>Tip: </span>
-						If used with GitHub, please use the raw link to prevent any problems (
-						<code className='text-sm'>raw.githubusercontent.com</code>).
-					</p>
-				</label>
-			</label>
+						<div className='divider'></div>
+						<p>
+							<span className='text-slate-500'>Tip: </span>
+							If used with GitHub, please use the raw link to prevent any problems (
+							<code className='text-sm'>raw.githubusercontent.com</code>).
+						</p>
+					</Dialog.Panel>
+				</div>
+			</Dialog>
 		</>
 	);
 }
 
-export default AppDrawerModalsiTermColors;
+export default AppDialogITermColors;
