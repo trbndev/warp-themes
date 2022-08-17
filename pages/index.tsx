@@ -48,6 +48,8 @@ function IndexPage() {
 				/>
 				<meta name='keywords' content='Warp, Theme, Creator, Terminal, Color, Warp-Themes' />
 				<meta name='robots' content='index, follow' />
+			
+			    <script data-goatcounter="https://haack.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 			</Head>
 			<AppLayout Navbar={<AppNavbar />} Sidebar={<AppSidebar />} WarpApp={<WarpApp />} />
 		</>
