@@ -48,10 +48,6 @@ You can install your newly created theme easily via the terminal. If you're skep
   <img src=".github/assets/demo_installation.gif" alt="Warp-Themes Demo Install via Terminal">
 </a>
 
-## Support the Development
-
-If you like the project and want to support the future development of it, maybe consider sponsoring me, by clicking the <a href="#readme-top">Sponsor button</a> at the top of the page or tip me a small amount over at <a href="https://ko-fi.com/haack">Ko-fi ☕️</a>.
-
 ## Special Thanks
 
 Special thanks to the awesome team over at [Warp](https://warp.dev/). They not only sponsored the domain ([warp-themes.com](https://warp-themes.com/)) but also gave me feedback and suggestions for improvement, after reaching out to me, after the first time tweeting about the project ✨
