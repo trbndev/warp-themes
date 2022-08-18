@@ -37,6 +37,19 @@ function AppDialogAbout(props: Props) {
 								Make <span className='font-medium'>iTerm Color Schemes</span> compatible with Warp
 							</li>
 						</ul>
+						<h4 className='text-xl font-semibold mb-1'>VS-Code Extension</h4>
+						<p className='mb-2'>
+							We also offer a small extension for VS-Code called{' '}
+							<a
+								href='https://github.com/trbnhck/warp-companion'
+								target='_blank'
+								className='text-blue-500 focus:outline-none'
+							>
+								Warp-Companion
+							</a>
+							. <br />
+							It synchronizes your VS-Code Theme with Warp.
+						</p>
 						<h4 className='text-xl font-semibold mb-1'>Useful links</h4>
 						<ul className='text-gray-600'>
 							<li className='hover:text-gray-900'>
@@ -58,6 +71,17 @@ function AppDialogAbout(props: Props) {
 									rel='noopener noreferrer'
 								>
 									<span>Themes - Warp Documentation</span>
+									<ExternalLinkIcon className='w-4 h-4' />
+								</a>
+							</li>
+							<li className='hover:text-gray-900'>
+								<a
+									href='https://github.com/trbnhck/warp-companion'
+									target='_blank'
+									className='flex items-center flex-row space-x-2'
+									rel='noopener noreferrer'
+								>
+									<span>Warp-Companion - VS-Code Extension</span>
 									<ExternalLinkIcon className='w-4 h-4' />
 								</a>
 							</li>

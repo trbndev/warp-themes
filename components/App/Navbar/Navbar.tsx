@@ -8,6 +8,7 @@ import {
 	InformationCircleIcon,
 	SparklesIcon,
 	TerminalIcon,
+	LightningBoltIcon,
 } from '@heroicons/react/outline';
 import { Popover, Transition } from '@headlessui/react';
 import { usePopper } from 'react-popper';
@@ -94,6 +95,18 @@ function AppNavbar() {
 									<SparklesIcon className='w-6 h-6' />
 									Load iTerm Colors
 								</button>
+							</li>
+							<li>
+								<a
+									href='https://github.com/trbnhck/warp-companion'
+									target='_blank'
+									rel='noopener noreferrer'
+									className='text-sm'
+								>
+									<LightningBoltIcon className='w-6 h-6 inline' />
+									VS-Code Extension
+									<ExternalLinkIcon className='w-4 h-4 ml-auto' />
+								</a>
 							</li>
 							<li className='menu-title'>
 								<span>More</span>
