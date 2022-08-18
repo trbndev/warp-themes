@@ -11,4 +11,13 @@ module.exports = {
 			},
 		];
 	},
+	async redirects() {
+		return [
+			{
+				source: '/companion',
+				destination: 'https://github.com/trbnhck/warp-companion',
+				permanent: true,
+			},
+		];
+	},
 };

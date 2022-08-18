@@ -3,6 +3,8 @@ import toast, { Toaster } from 'react-hot-toast';
 import { useEffect } from 'react';
 import { Transition } from '@headlessui/react';
 import AppDialogAbout from '../Dialogs/About';
+import Link from 'next/link';
+import { ExternalLinkIcon } from '@heroicons/react/outline';
 
 interface Props {
 	Navbar: ReactNode;
@@ -37,9 +39,8 @@ function AppLayout(props: Props) {
 						</a>
 						.
 					</p>
-					<div className='flex gap-2'>
+					<div className='flex gap-2 mt-1'>
 						<label
-							htmlFor='about-modal'
 							className='btn flex-grow btn-ghost text-primary modal-button'
 							onClick={() => {
 								setIsAboutDialogOpen(true);
@@ -48,13 +49,48 @@ function AppLayout(props: Props) {
 						>
 							Learn more
 						</label>
-						<button onClick={() => toast.dismiss(toastId)} className='btn btn-ghost flex-grow text-error'>
+						<button onClick={() => toast.dismiss(toastId)} className='btn btn-ghost flex-grow text-red-500'>
 							Dismiss
 						</button>
 					</div>
 				</div>
 			</Transition>
 		));
+		setTimeout(() => {
+			const companionToast = toast.custom((t) => (
+				<Transition
+					show={t.visible}
+					enter='transition-opacity duration-75'
+					enterFrom='opacity-0'
+					enterTo='opacity-100'
+					leave='transition-opacity duration-150'
+					leaveFrom='opacity-100'
+					leaveTo='opacity-0'
+				>
+					<div className='bg-white px-6 py-4 shadow-md rounded-md text-right'>
+						<p>
+							We also got a VS-Code extension called <span className='font-semibold'>Warp-Companion</span>{' '}
+							🧙🏻‍♂️
+							<br />
+							It <i>synchronizes</i> your VS-Code theme with Warp ✨
+						</p>
+						<div className='flex mt-1'>
+							<Link href='/companion' passHref>
+								<a target='_blank' className='btn flex-grow btn-ghost text-primary gap-2'>
+									Try it out now <ExternalLinkIcon className='w-4 h-4' />
+								</a>
+							</Link>
+							<button
+								onClick={() => toast.dismiss(companionToast)}
+								className='btn btn-ghost flex-grow text-red-500'
+							>
+								Dismiss
+							</button>
+						</div>
+					</div>
+				</Transition>
+			));
+		}, 10000);
 	}, []);
 
 	return (

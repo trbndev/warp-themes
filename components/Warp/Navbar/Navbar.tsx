@@ -13,7 +13,7 @@ function WarpAppNavbar() {
 				</div>
 				<div className='flex flex-row'>
 					<WarpAppNavbarTab title='~/warp-themes' active />
-					<WarpAppNavbarTab title='~/warp-themes/rainbow' />
+					<WarpAppNavbarTab title='~/warp-themes/companion' />
 				</div>
 			</div>
 			<WarpAppBlockDivider />
