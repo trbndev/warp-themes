@@ -8,75 +8,10 @@ import SidebarTitle from './Title';
 
 function AppSidebar() {
 	const [context, setContext] = useAppContext();
-	const [normalBlack, setNormalBlack] = useState(context.terminal_colors.normal.black);
-	const [normalRed, setNormalRed] = useState(context.terminal_colors.normal.red);
-	const [normalGreen, setNormalGreen] = useState(context.terminal_colors.normal.green);
-	const [normalYellow, setNormalYellow] = useState(context.terminal_colors.normal.yellow);
-	const [normalBlue, setNormalBlue] = useState(context.terminal_colors.normal.blue);
-	const [normalMagenta, setNormalMagenta] = useState(context.terminal_colors.normal.magenta);
-	const [normalCyan, setNormalCyan] = useState(context.terminal_colors.normal.cyan);
-	const [normalWhite, setNormalWhite] = useState(context.terminal_colors.normal.white);
-	const [brightBlack, setBrightBlack] = useState(context.terminal_colors.bright.black);
-	const [brightRed, setBrightRed] = useState(context.terminal_colors.bright.red);
-	const [brightGreen, setBrightGreen] = useState(context.terminal_colors.bright.green);
-	const [brightYellow, setBrightYellow] = useState(context.terminal_colors.bright.yellow);
-	const [brightBlue, setBrightBlue] = useState(context.terminal_colors.bright.blue);
-	const [brightMagenta, setBrightMagenta] = useState(context.terminal_colors.bright.magenta);
-	const [brightCyan, setBrightCyan] = useState(context.terminal_colors.bright.cyan);
-	const [brightWhite, setBrightWhite] = useState(context.terminal_colors.bright.white);
-
-	useEffect(() => {
-		setContext({
-			...context,
-			terminal_colors: {
-				...context.terminal_colors,
-				normal: {
-					...context.terminal_colors.normal,
-					black: normalBlack,
-					red: normalRed,
-					green: normalGreen,
-					yellow: normalYellow,
-					blue: normalBlue,
-					magenta: normalMagenta,
-					cyan: normalCyan,
-					white: normalWhite,
-				},
-				bright: {
-					...context.terminal_colors.bright,
-					black: brightBlack,
-					red: brightRed,
-					green: brightGreen,
-					yellow: brightYellow,
-					blue: brightBlue,
-					magenta: brightMagenta,
-					cyan: brightCyan,
-					white: brightWhite,
-				},
-			},
-		});
-	}, [
-		normalBlack,
-		normalRed,
-		normalGreen,
-		normalYellow,
-		normalBlue,
-
-		normalMagenta,
-		normalCyan,
-		normalWhite,
-		brightBlack,
-		brightRed,
-		brightGreen,
-		brightYellow,
-		brightBlue,
-		brightMagenta,
-		brightCyan,
-		brightWhite,
-	]);
 
 	const styles = [
-		'w-full rounded-md outline-none bg-gray-50',
-		'w-full rounded-md bg-white py-2 font-semibold text-gray-200 bg-gray-800 drop-shadow-sm border border-gray-400 outline-none',
+		'w-full rounded-md outline-none bg-gray-100',
+		'w-full rounded-md bg-white py-2 font-semibold text-gray-200 bg-black drop-shadow-sm border border-gray-400 outline-none',
 	];
 
 	return (
