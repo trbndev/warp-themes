@@ -48,6 +48,10 @@ You can install your newly created theme easily via the terminal. If you're skep
   <img src=".github/assets/demo_installation.gif" alt="Warp-Themes Demo Install via Terminal">
 </a>
 
+## Extension
+
+If you're using Visual Studio Code, also try out [**Warp-Companion**](https://github.com/trbnhck/warp-companion) 🧙🏻‍♂️
+
 ## Special Thanks
 
 Special thanks to the awesome team over at [Warp](https://warp.dev/). They not only sponsored the domain ([warp-themes.com](https://warp-themes.com/)) but also gave me feedback and suggestions for improvement, after reaching out to me, after the first time tweeting about the project ✨
