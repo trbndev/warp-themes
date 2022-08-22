@@ -94,7 +94,7 @@ function AppLayout(props: Props) {
 	}, []);
 
 	return (
-		<div className='flex h-screen flex-col bg-slate-100 sm:bg-white'>
+		<div className='flex h-screen flex-col bg-slate-100 sm:bg-white overflow-y-hidden'>
 			<AppDialogAbout _open={isAboutDialogOpen} _onClose={() => setIsAboutDialogOpen(false)} />
 			<div className='w-full border-b z-20 hidden sm:block'>{props.Navbar}</div>
 			<div className='flex h-full flex-row z-10'>
