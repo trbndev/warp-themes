@@ -192,7 +192,7 @@ function AppDialogDownload() {
 									<div className='swap-on'>✅ Copied</div>
 									<div className='swap-off'>📋 Copy</div>
 								</label>
-								<a className='btn btn-outline btn-wide text-lg' href={`https://warp-themes.com/d/${tId}`}>🔍 Inspect Source</a>
+								<a className='btn btn-outline btn-wide text-lg' href={`https://warp-themes.com/d/${tId}`} target="_blank">🔍 Inspect Source</a>
 							</div>
 						</div>
 						<div className='divider'>OR</div>
