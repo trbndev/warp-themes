@@ -1,9 +1,9 @@
 name: 🐛 Bug
 description: Something doesn't seems right 🧐
-title: "[BUG] "
+title: '[BUG] '
 labels: [bug]
 assignees:
-  - trbnhck
+  - haackt
 body:
   - type: markdown
     attributes:
@@ -13,7 +13,7 @@ body:
     id: browser
     attributes:
       label: Browser
-      description: Which browser were you using? Please provide the version as well 
+      description: Which browser were you using? Please provide the version as well
       placeholder: Google Chrome Version 104.0.5112.79
     validations:
       required: true
@@ -38,5 +38,3 @@ body:
       description: Everything else, that might be relevant for this bug report
     validations:
       required: true
-  
-    

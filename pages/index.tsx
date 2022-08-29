@@ -13,10 +13,7 @@ function IndexPage() {
 				<title>Warp-Themes - Theme Builder for Warp</title>
 
 				<meta name='title' content='Warp-Themes - Theme Builder for Warp' />
-				<meta
-					name='description'
-					content='With Warp-Themes you can easily create themes for the Warp Terminal ✨'
-				/>
+				<meta name='description' content='With Warp-Themes you can easily create themes for the Warp Terminal ✨' />
 
 				<meta property='og:type' content='website' />
 				<meta property='og:url' content='https://warp-themes.com/' />
@@ -27,7 +24,7 @@ function IndexPage() {
 				/>
 				<meta
 					property='og:image'
-					content='https://raw.githubusercontent.com/trbnhck/warp-themes/main/.github/assets/hero.png'
+					content='https://raw.githubusercontent.com/haackt/warp-themes/main/.github/assets/hero.png'
 				/>
 
 				<meta property='twitter:card' content='summary_large_image' />
@@ -39,7 +36,7 @@ function IndexPage() {
 				/>
 				<meta
 					property='twitter:image'
-					content='https://raw.githubusercontent.com/trbnhck/warp-themes/main/.github/assets/hero.png'
+					content='https://raw.githubusercontent.com/haackt/warp-themes/main/.github/assets/hero.png'
 				/>
 				<meta name='keywords' content='Warp, Theme, Creator, Terminal, Color, Warp-Themes' />
 				<meta name='robots' content='index, follow' />

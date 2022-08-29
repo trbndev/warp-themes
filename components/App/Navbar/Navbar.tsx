@@ -98,7 +98,7 @@ function AppNavbar() {
 							</li>
 							<li>
 								<a
-									href='https://github.com/trbnhck/warp-companion'
+									href='https://github.com/haackt/warp-companion'
 									target='_blank'
 									rel='noopener noreferrer'
 									className='text-sm'
@@ -119,18 +119,14 @@ function AppNavbar() {
 								</a>
 							</li>
 							<li>
-								<a
-									href='https://www.github.com/trbnhck/warp-themes'
-									target='_blank'
-									rel='noopener noreferrer'
-								>
+								<a href='https://www.github.com/haackt/warp-themes' target='_blank' rel='noopener noreferrer'>
 									<CodeIcon className='w-6 h-6 inline' />
 									GitHub
 									<ExternalLinkIcon className='w-4 h-4 ml-auto' />
 								</a>
 							</li>
 							<li>
-								<a href='https://github.com/sponsors/trbnhck' target='_blank' rel='noopener noreferrer'>
+								<a href='https://github.com/sponsors/haackt' target='_blank' rel='noopener noreferrer'>
 									<CashIcon className='w-6 h-6 inline' />
 									Donate
 									<ExternalLinkIcon className='w-4 h-4 ml-auto' />

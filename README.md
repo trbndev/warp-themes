@@ -12,10 +12,10 @@
   <h3><a href="https://warp-themes.com"><strong>✨ Try it out now ✨</strong></a></h3>
     
   <br/>
-  <a href="https://github.com/trbnhck/warp-themes/issues"> 🐛 Report a Bug</a>&nbsp;&nbsp;·&nbsp; 
-  <a href="https://github.com/trbnhck/warp-themes/issues">🚀 Request a Feature</a>
+  <a href="https://github.com/haackt/warp-themes/issues"> 🐛 Report a Bug</a>&nbsp;&nbsp;·&nbsp; 
+  <a href="https://github.com/haackt/warp-themes/issues">🚀 Request a Feature</a>
   <br />
-  <h4><a href="https://github.com/sponsors/trbnhck">☕️ Support the Development</a></h4>
+  <h4><a href="https://github.com/sponsors/haackt">☕️ Support the Development</a></h4>
 </div>
 
 ## About
@@ -50,7 +50,7 @@ You can install your newly created theme easily via the terminal. If you're skep
 
 ## Extension
 
-If you're using Visual Studio Code, also try out [**Warp-Companion**](https://github.com/trbnhck/warp-companion) 🧙🏻‍♂️
+If you're using Visual Studio Code, also try out [**Warp-Companion**](https://github.com/haackt/warp-companion) 🧙🏻‍♂️
 
 ## Special Thanks
 

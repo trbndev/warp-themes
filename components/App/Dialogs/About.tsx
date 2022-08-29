@@ -17,8 +17,7 @@ function AppDialogAbout(props: Props) {
 					<Dialog.Panel className='mx-auto  w-fit rounded-lg shadow-lg bg-white px-12 py-7'>
 						<Dialog.Title className='text-3xl font-semibold mb-4'>About</Dialog.Title>
 						<p className='mb-2'>
-							<span className='text-primary font-medium'>Warp-Themes</span> is a visual theme builder for
-							the{' '}
+							<span className='text-primary font-medium'>Warp-Themes</span> is a visual theme builder for the{' '}
 							<a href='https://warp.dev/' target='_blank' className='text-blue-500 focus:outline-none'>
 								Warp
 							</a>{' '}
@@ -30,8 +29,7 @@ function AppDialogAbout(props: Props) {
 								<span className='font-medium'>Visually</span> create your theme
 							</li>
 							<li>
-								<span className='font-medium'>Automatic Installation</span> process provided out of the
-								box
+								<span className='font-medium'>Automatic Installation</span> process provided out of the box
 							</li>
 							<li className='mb-2'>
 								Make <span className='font-medium'>iTerm Color Schemes</span> compatible with Warp
@@ -41,7 +39,7 @@ function AppDialogAbout(props: Props) {
 						<p className='mb-2'>
 							We also offer a small extension for VS-Code called{' '}
 							<a
-								href='https://github.com/trbnhck/warp-companion'
+								href='https://github.com/haackt/warp-companion'
 								target='_blank'
 								className='text-blue-500 focus:outline-none'
 							>
@@ -76,7 +74,7 @@ function AppDialogAbout(props: Props) {
 							</li>
 							<li className='hover:text-gray-900'>
 								<a
-									href='https://github.com/trbnhck/warp-companion'
+									href='https://github.com/haackt/warp-companion'
 									target='_blank'
 									className='flex items-center flex-row space-x-2'
 									rel='noopener noreferrer'

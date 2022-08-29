@@ -15,7 +15,7 @@ module.exports = {
 		return [
 			{
 				source: '/companion',
-				destination: 'https://github.com/trbnhck/warp-companion',
+				destination: 'https://github.com/haackt/warp-companion',
 				permanent: true,
 			},
 		];

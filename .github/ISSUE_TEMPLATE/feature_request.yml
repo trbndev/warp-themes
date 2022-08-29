@@ -2,7 +2,7 @@ name: 🚀 Feature request
 description: That sould be a thing! ✨
 labels: [enhancement]
 assignees:
-  - trbnhck
+  - haackt
 body:
   - type: markdown
     attributes:
