@@ -1,3 +1,5 @@
+> I'm currently in the process of reworking Warp-Themes and Warp-Companion. Stay tuned for future updated 🎉
+
 <a name="readme-top"></a>
 <br />
 
